@@ -11,6 +11,7 @@
 # будут указываться им строго в порядке возрастания.
 
 import random
+import string
 
 # Указываем пределы генерации случайных значений
 
@@ -21,21 +22,17 @@ n = float(input('Введите любое другое число с плава
 m = input('Введите строчную букву английского алфавита: ')
 o = input('Введите строчную букву английского алфавита: ')
 
-# Определяем алфавит, в рамках которого будут генерироваться случайные символы
-
-rng = ('abcdefghijklmnopqrstuvwxyz')
-
 # Добавляем переменные,обращающиеся к индексам введенных пределов генерации в алфавите
 
-q = rng.index(m)
-s = rng.index(o)
+q = string.ascii_lowercase.index(m)
+s = string.ascii_lowercase.index(o)
 
 # Генерируем и выводим случайные значения
 
 a = random.randint(d, e)
 b = random.uniform(k, n)
-c = random.choice(rng[q:s])
+c = random.choice(string.ascii_lowercase[q:s])
 print(a)
 print(f'b = {b:.3f}')
-print(rng[q-1:s])
+print(string.ascii_lowercase[q-1:s])
 print(c)
