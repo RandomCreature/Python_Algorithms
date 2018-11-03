@@ -2,7 +2,9 @@
 
 # Определяем алфавит и переменные
 
-rng = ('abcdefghijklmnopqrstuvwxyz')
+import string
+
+rng = string.ascii_lowercase
 a = list(str(input('Введите две любые строчные буквы английского алфавита: ')))
 b = int(rng.index(a[0]) + 1)
 c = int(rng.index(a[1]) + 1)
